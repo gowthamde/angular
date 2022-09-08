@@ -1,0 +1,13 @@
+<mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>{{label}}</mat-label>
+    <input #input matInput [type]="type" 
+    (input)="onChange()" 
+    (blur)="onTouched()"
+    [disabled]="disabled"
+    [placeholder]="placeholder"
+    [(ngModel)]="value"
+    />
+    <mat-error *ngIf="isSubmit">
+        {{errorMsg}}
+    </mat-error>
+</mat-form-field>
